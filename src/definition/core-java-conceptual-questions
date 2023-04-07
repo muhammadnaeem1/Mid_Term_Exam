@@ -164,20 +164,73 @@ which can be useful when creating objects with different initializations based o
 
 
 If we don't have a constructor declared, what is called during the object creation?
+If we do not declare a constructor for a class, the compiler automatically generates a default constructor for us.
+This default constructor takes no arguments and simply initializes all instance variables to their default values (which is null for object references,
+0 for numeric types, and false for boolean types).
+
 What is "this" keyword in java ?
+The "this" keyword refers to the current instance of the class in which it is used. It can be used to refer to the current object's instance variables and methods,
+as well as to call constructors and pass arguments to methods
+
 What is "super" keyword in java? How many possible way can you use?
+The "super" keyword refers to the parent class of the current class in which it is used. It is used to access the parent class's methods and instance variables,
+as well as to call the parent class's constructors. 
+Here are a few possible ways to use the "super" keyword in Java:
+1. To call the parent class's constructor: We can use "super" to call a constructor of the parent class.
+ This is useful when the parent class has a constructor that initializes instance variables that are not visible to the child class.
+2. To call the parent class's methods: We can use "super" to call a method of the parent class.
+  This is useful when the child class overrides a method of the parent class but still needs to access the parent class's implementation.
+3. To access the parent class's instance variables: We can use "super" to access an instance variable of the parent class.
+   This is useful when the parent class has an instance variable that is not visible to the child class.
+
 What is JVM stand for ?
+JVM stands for Java Virtual Machine.
+
 Is JVM platform independent?
+Yes, the JVM (Java Virtual Machine) is platform-independent.
+
 What version of java are you using?
+Java SE 17.
+
 What is JAR stand for ?
+JAR stands for "Java Archive."
+
 What is the difference between JDK and JVM?
+1. JDK (Java Development Kit) is a software development kit that provides tools to develop, compile, and debug Java programs.
+   It includes the Java Runtime Environment (JRE), which provides the JVM to execute Java programs, as well as development tools such as a compiler,
+   debugger, and other utilities.
+2. JVM (Java Virtual Machine) is an abstract machine that provides a runtime environment for Java programs to execute.
+   It interprets the compiled Java bytecode and provides a platform-independent way to execute Java programs on different hardware and operating systems.   
+      
 What is the difference between JVM and JRE?
+1. JVM is an abstract machine that provides a runtime environment for Java programs to execute. It interprets the compiled Java bytecode and provides a platform-independent way to execute Java programs,
+    on different hardware and operating systems.
+2. JRE is a software package that includes the JVM, along with libraries and other components required to run Java applications but does not include development,
+   tools such as compilers and debuggers.
+
+
 What is compile time and run time?
+ compile time is the phase during which source code is compiled into machine code,
+ while run time is the phase during which the compiled program or library is executed on a computer.
+
 What is heap?
+   The "heap" is a region of memory used to allocate objects at runtime. It is a part of the Java Virtual Machine (JVM) and is managed by the garbage collector.
+   The heap is used to store all objects that are created during the execution of a Java program.
+
 How java manage it's memory?
+  Java manages its memory using the Java Virtual Machine (JVM) and its memory management subsystem, which includes the garbage collector.
+
 What is the difference between String, StringBuffer and StringBuilder?
+ String, StringBuffer, and StringBuilder are all used to represent text in Java, but they have different characteristics and are used in different situations.
+ String is immutable and thread-safe, StringBuffer is mutable and thread-safe, and StringBuilder is mutable but not thread-safe.
+
 What is Singleton class?
+  A Singleton class is a class that is designed to allow only one instance of the class to be created and to provide global access to that instance.
+
 What is Serialization and Deserialization?
+1. Serialization involves converting an object into a byte stream that can be transmitted over a network or stored in a file.
+2. Deserialization is the reverse process of serialization. It involves converting a byte stream into an object.
+
 when to use transient variable in java?
 Difference between while and do..while loop?
 What is Enum?
