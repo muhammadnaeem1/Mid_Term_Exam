@@ -232,27 +232,107 @@ What is Serialization and Deserialization?
 2. Deserialization is the reverse process of serialization. It involves converting a byte stream into an object.
 
 when to use transient variable in java?
-Difference between while and do..while loop?
-What is Enum?
-What is Iterator?
-Which one will take more memory, an int or Integer?
-Why is String Immutable in Java?
-What is constructor chaining in Java?
-The difference between Serial and Parallel Garbage Collector?
-What is JIT stands for?
-Explain Java Heap space and Garbage collection?
-Can you guarantee the garbage collection process?
-What is the difference between stack and heap in Java?
-What is reflection in java and why is it useful?
-what is multithreading in java?
-What is the use of synchronization in Java?
-What is Framework?
-What are the testing Framework available in java?
-Difference between jUnit and testNG?
-What are the dependencies for this project?
-what is dependency injection in java?
-What is static binding and dynamic binding?
+ Transient variables can be useful for managing the serialization and deserialization of objects in Java. However,
+ they should be used judiciously and only for data that is truly transient or not essential to the object's state.
 
+Difference between while and do..while loop?
+The while loop executes the code block only if the condition is true.
+The condition is checked at the beginning of the loop, and if it is false, the loop is skipped entirely.
+If the condition is true, the code block is executed repeatedly until the condition becomes false.
+The while loop is suitable when we want to execute a code block zero or more times based on a condition.
+The do..while loop executes the code block at least once, regardless of whether the condition is true or false.
+The condition is checked at the end of the loop, and if it is true, the code block is executed repeatedly until the condition becomes false.
+If the condition is false, the loop is exited after the first iteration.
+The do..while loop is suitable when we want to execute a code block one or more times based on a condition.
+
+What is Enum?
+An enum (short for "enumeration") is a special type of data type that allows you to define a fixed set of constants.
+These constants are often used to represent a set of related values that are known at compile time.
+
+What is Iterator?
+An Iterator is an interface that is used to traverse or iterate over the elements in a collection.
+The Iterator provides a uniform way to access the elements of a collection without exposing its underlying implementation
+
+Which one will take more memory, an int or Integer?
+An int is a primitive data type that holds a 32-bit integer value, whereas Integer is a wrapper class for the int primitive type that provides,
+methods for working with int values as objects. When an int is declared and initialized, it occupies 32 bits (4 bytes) of memory. On the other hand,
+an Integer object has an overhead of 16 bytes, plus the 4 bytes for the int value it wraps. So, an Integer object takes more memory than an int primitive type.
+
+Why is String Immutable in Java?
+A String is immutable, which means that its contents cannot be changed after it is created. Once a String object is created,
+its contents remain the same throughout the program's lifetime.the immutability of Strings in Java provides several benefits, including security, thread-safety, performance, caching, and simplicity.
+While it may require more memory to create new String objects when concatenating or manipulating them, the benefits of immutability outweigh the costs in most cases
+
+What is constructor chaining in Java?
+constructor chaining is a mechanism where a constructor of a class calls another constructor of the same class or of its parent class to perform initialization tasks.
+Constructor chaining allows code reuse and reduces code duplication by allowing constructors to share common initialization logic.
+
+The difference between Serial and Parallel Garbage Collector?
+The parallel garbage collector is better suited for high-performance applications that need to perform frequent garbage collections and have plenty of available memory.
+The serial garbage collector is better suited for applications with limited memory and low performance requirements.
+
+What is JIT stands for?
+JIT stands for Just-In-Time.
+
+Explain Java Heap space and Garbage collection?
+The heap is the region of memory where objects are allocated. The heap space is managed by the Java Virtual Machine (JVM) and is shared,
+by all threads running in the JVM. Garbage collection is the process of automatically freeing up memory that is no longer being used by the program.
+The JVM uses a garbage collector to identify and remove objects that are no longer being referenced by the program. The garbage collector periodically,
+scans the heap to identify unused objects and frees up the memory occupied by those objects.
+
+Can you guarantee the garbage collection process?
+The garbage collection process is managed by the Java Virtual Machine (JVM), and as such, it cannot be guaranteed. The JVM will perform garbage collection automatically at various times,
+depending on the needs of the application and the available system resources.
+
+What is the difference between stack and heap in Java?
+The stack and heap are two different areas of memory used for storing data.
+The stack is used to store local variables and method calls. Each thread in a Java program has its own stack, which is created when the thread is started.
+The stack is organized in a last-in, first-out (LIFO) manner. When a method is called, a new frame is added to the top of the stack, and when the method returns,
+the frame is removed from the stack. The stack is usually small and is limited in size.
+On the other hand, the heap is used to store objects. All objects are allocated on the heap, and the memory for the objects is managed by the Java Virtual Machine (JVM).
+The heap is a larger area of memory compared to the stack and can grow dynamically as needed.
+
+What is reflection in java and why is it useful?
+Reflection in Java is a feature that allows a program to examine or modify its own structure, properties, and behavior at runtime. 
+Reflection is useful in many scenarios, such as creating objects dynamically, Inspecting classes and objects, Building generic utilities and frameworks and libraries.
+However, it is important to note that reflection can have a performance cost and can also make the code more complex and harder to understand. Therefore,
+it should be used judiciously and only when necessary.
+
+what is multithreading in java?
+Multithreading in Java refers to the concurrent execution of two or more threads in a single program. 
+A thread is a lightweight sub-process that can run concurrently with other threads within the same program,
+sharing the same memory space and resources.
+
+What is the use of synchronization in Java?
+Synchronization in Java refers to the process of controlling access to shared resources or critical sections of code by multiple threads to avoid race conditions,
+data inconsistency, and other synchronization issues that can occur when multiple threads access shared resources simultaneously.
+
+What is Framework?
+In software development, a framework is a reusable software architecture or set of libraries that provides a standard structure and common functionality to facilitate the development of software applications.
+A framework typically includes a set of pre-written code, libraries, tools, and APIs that developers can use to build applications quickly and efficiently.
+
+What are the testing Framework available in java?
+There are several testing frameworks available in Java that are widely used for unit testing and integration testing, such as JUnit, TestNG, Mockito,Selenium, Cucumber
+and arquillian. These are just a few examples of the many testing frameworks available in Java. The choice of a testing framework depends on the specific requirements,
+of the project and the preferences of the development team.
+
+Difference between jUnit and testNG?
+The JUnit is a simple and widely used testing framework, TestNG provides more advanced features and flexibility for complex testing scenarios.
+The choice between JUnit and TestNG ultimately depends on the specific requirements of the project and the preferences of the development team
+
+What are the dependencies for this project?
+ dependencies for a Java project are managed using build tools such as Maven, Gradle, or Ant. These build tools use a configuration file, such as a pom.xml file for Maven, to specify the required dependencies for the project.
+ The dependencies are typically downloaded from a central repository, such as Maven Central or JCenter, and added to the project's classpath during compilation and execution.
+
+what is dependency injection in java?
+Dependency Injection (DI) is a design pattern that allows objects to be loosely coupled by providing dependencies through an external source rather than,
+hard-coding them into the object.
+
+What is static binding and dynamic binding?
+Static binding, also known as early binding, happens at compile-time. In static binding, the method call is resolved to the method implementation based,
+on the type of the variable or object reference at compile-time.
+Dynamic binding, also known as late binding, happens at runtime. In dynamic binding, the method call is resolved to the method implementation based on the actual,
+type of the object at runtime.
 
 
 
