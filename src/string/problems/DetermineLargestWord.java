@@ -12,13 +12,33 @@ public class DetermineLargestWord {
         String s="Human brain is a biological learning machine";
         Map<Integer, String> wordNLength = findTheLargestWord(s);
         //implement
+        int maxLength = 0;
+        String longestWord = "";
 
+        for (Map.Entry<Integer, String> entry : wordNLength.entrySet()) {
+            int length = entry.getKey();
+            String word = entry.getValue();
+
+            if (length > maxLength) {
+                maxLength = length;
+                longestWord = word;
+            }
+        }
+
+        System.out.println(maxLength + " " + longestWord);
     }
 
     public static Map<Integer, String> findTheLargestWord(String wordGiven){
         Map<Integer, String> map = new HashMap<Integer, String>();
-        String st = "";
-        //implement
+        String[] words = wordGiven.split(" ");
+
+        for (String word : words) {
+            int length = word.length();
+
+            if (!map.containsKey(length)) {
+                map.put(length, word);
+            }
+        }
 
         return map;
     }
