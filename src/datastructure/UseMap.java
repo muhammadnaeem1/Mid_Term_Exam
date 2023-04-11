@@ -1,5 +1,7 @@
 package datastructure;
 
+import java.util.*;
+
 public class UseMap {
 
 	public static void main(String[] args) {
@@ -10,7 +12,11 @@ public class UseMap {
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
+		// Create a Map with a String key and a List<String> value
+
+
+
+		}
 
 	}
 
-}
